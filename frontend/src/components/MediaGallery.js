@@ -63,16 +63,14 @@ const MediaCard = ({ item, onPreview }) => {
       data-testid={`media-${item.type}-${item.title.toLowerCase().replace(/\s/g, '-')}`}
     >
       {/* Thumbnail */}
-      <div className="relative aspect-square overflow-hidden bg-[#E5E5E5]">
+      <div className="relative aspect-square overflow-hidden bg-[#0A0A0A]">
         {item.type === 'video' ? (
           <video
             src={item.videoUrl}
             muted
-            loop
             playsInline
-            className="w-full h-full object-cover img-grayscale group-hover:filter-none transition-all duration-300"
-            onMouseEnter={(e) => e.target.play()}
-            onMouseLeave={(e) => { e.target.pause(); e.target.currentTime = 0; }}
+            preload="metadata"
+            className="w-full h-full object-cover"
           />
         ) : (
           <img
