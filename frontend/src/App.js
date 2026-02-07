@@ -2,6 +2,7 @@ import "@/App.css";
 import { Hero } from "./components/Hero";
 import { Bio } from "./components/Bio";
 import { MusicPlayer } from "./components/MusicPlayer";
+import { MediaGallery } from "./components/MediaGallery";
 import { Links } from "./components/Links";
 import { TechRider } from "./components/TechRider";
 import { Contact } from "./components/Contact";
@@ -14,6 +15,7 @@ function App() {
         <Hero />
         <Bio />
         <MusicPlayer />
+        <MediaGallery />
         <Links />
         <TechRider />
         <Contact />

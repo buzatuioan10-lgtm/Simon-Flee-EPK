@@ -18,7 +18,7 @@ export const Bio = () => {
           {/* Main Bio */}
           <div className="lg:col-span-8">
             <p className="font-mono text-base md:text-lg leading-relaxed text-[#0A0A0A] mb-6">
-              Simon Flee is a Bucharest-based DJ and producer currently living in Brussels. His selections sit between{' '}
+              Simon Flee is a Bucharest-born DJ and producer currently based in Brussels. His selections sit between{' '}
               <span className="genre-tag">house</span>, <span className="genre-tag">techno</span>, and{' '}
               <span className="genre-tag">breaks</span>, drawing from the left field of club music with touches of{' '}
               <span className="genre-tag">acid</span>, <span className="genre-tag">trance</span>, and{' '}
