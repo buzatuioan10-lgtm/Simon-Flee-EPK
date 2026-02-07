@@ -81,19 +81,19 @@ const MediaCard = ({ item, onPreview }) => {
         )}
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[#0A0A0A]/0 group-hover:bg-[#0A0A0A]/60 transition-all duration-300 flex items-center justify-center">
-          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex gap-3">
-            {item.type === 'video' && (
-              <div className="w-12 h-12 bg-[#D1FF00] flex items-center justify-center">
-                <Play className="w-5 h-5 text-[#0A0A0A]" />
-              </div>
-            )}
-            {item.type === 'image' && (
+        <div className="absolute inset-0 bg-[#0A0A0A]/0 group-hover:bg-[#0A0A0A]/40 transition-all duration-300 flex items-center justify-center">
+          {item.type === 'video' && (
+            <div className="w-14 h-14 bg-[#D1FF00] flex items-center justify-center opacity-90 group-hover:opacity-100 transition-opacity">
+              <Play className="w-6 h-6 text-[#0A0A0A] ml-1" />
+            </div>
+          )}
+          {item.type === 'image' && (
+            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="w-12 h-12 bg-[#F2F2F2] flex items-center justify-center">
                 <Image className="w-5 h-5 text-[#0A0A0A]" />
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
 
         {/* Type Badge */}
