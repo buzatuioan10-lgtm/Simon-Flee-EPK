@@ -27,17 +27,15 @@ const mediaItems = [
   {
     type: 'video',
     title: 'Rewind Reel 1',
-    thumbnail: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ijvabzkm_FCC94E21-57D5-40AC-A8BE-1EFE5C75EA9E.JPG',
-    downloadUrl: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ycob3aec_reel%20rewind%203.mp4',
     videoUrl: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ycob3aec_reel%20rewind%203.mp4',
+    downloadUrl: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ycob3aec_reel%20rewind%203.mp4',
     filename: 'simon_flee_reel_01.mp4'
   },
   {
     type: 'video',
     title: 'Rewind Reel 2',
-    thumbnail: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ya19586d_8335143B-A6CB-4CB4-AC70-00D15E0F2918.JPG',
-    downloadUrl: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ra5efl9g_reel%20rewind%204.mp4',
     videoUrl: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ra5efl9g_reel%20rewind%204.mp4',
+    downloadUrl: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ra5efl9g_reel%20rewind%204.mp4',
     filename: 'simon_flee_reel_02.mp4'
   }
 ];
@@ -66,11 +64,23 @@ const MediaCard = ({ item, onPreview }) => {
     >
       {/* Thumbnail */}
       <div className="relative aspect-square overflow-hidden bg-[#E5E5E5]">
-        <img
-          src={item.thumbnail}
-          alt={item.title}
-          className="w-full h-full object-cover img-grayscale group-hover:filter-none transition-all duration-300"
-        />
+        {item.type === 'video' ? (
+          <video
+            src={item.videoUrl}
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover img-grayscale group-hover:filter-none transition-all duration-300"
+            onMouseEnter={(e) => e.target.play()}
+            onMouseLeave={(e) => { e.target.pause(); e.target.currentTime = 0; }}
+          />
+        ) : (
+          <img
+            src={item.thumbnail}
+            alt={item.title}
+            className="w-full h-full object-cover img-grayscale group-hover:filter-none transition-all duration-300"
+          />
+        )}
         
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#0A0A0A]/0 group-hover:bg-[#0A0A0A]/60 transition-all duration-300 flex items-center justify-center">

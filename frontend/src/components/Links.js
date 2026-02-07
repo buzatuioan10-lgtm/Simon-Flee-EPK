@@ -4,19 +4,14 @@ import { ExternalLink } from 'lucide-react';
 export const Links = () => {
   const links = [
     {
-      label: 'Bandcamp',
-      url: 'https://simonflee.bandcamp.com/',
-      description: 'Releases & Original Music'
+      label: 'SoundCloud',
+      url: 'https://soundcloud.com/simon-flee',
+      description: 'Productions & Unreleased'
     },
     {
       label: 'Mixcloud',
       url: 'https://www.mixcloud.com/simonflee/',
       description: 'DJ Mixes & Sets'
-    },
-    {
-      label: 'SoundCloud',
-      url: 'https://soundcloud.com/simon-flee',
-      description: 'Productions & Unreleased'
     },
     {
       label: 'YouTube',
