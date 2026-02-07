@@ -1,34 +1,124 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Simon Flee Presskit Styles */
+
+.presskit-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  border-left: 1px solid #0A0A0A;
+  border-right: 1px solid #0A0A0A;
+  min-height: 100vh;
+  background-color: #F2F2F2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Section borders */
+.section-border {
+  border-bottom: 1px solid #0A0A0A;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Grid cell hover effect */
+.grid-cell-hover {
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-    color: #61dafb;
+.grid-cell-hover:hover {
+  background-color: #D1FF00;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Image grayscale effect */
+.img-grayscale {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.img-grayscale:hover {
+  filter: grayscale(0%);
+}
+
+/* Embed wrapper */
+.embed-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.embed-cover {
+  position: absolute;
+  inset: 0;
+  background-color: #0A0A0A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.embed-cover.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Tech rider table */
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tech-table td,
+.tech-table th {
+  border: 1px solid #0A0A0A;
+  padding: 1rem;
+  text-align: left;
+}
+
+.tech-table th {
+  background-color: #E5E5E5;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Contact link cells */
+.contact-cell {
+  border: 1px solid #0A0A0A;
+  padding: 1.5rem 2rem;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.contact-cell:hover {
+  background-color: #D1FF00;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #0A0A0A;
+  color: #F2F2F2;
+  padding: 0.75rem 1.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  background-color: #D1FF00;
+  color: #0A0A0A;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Genre tags */
+.genre-tag {
+  display: inline-block;
+  background-color: #D1FF00;
+  color: #0A0A0A;
+  padding: 0.25rem 0.5rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
