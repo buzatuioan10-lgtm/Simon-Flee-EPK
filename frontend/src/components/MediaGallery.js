@@ -27,6 +27,7 @@ const mediaItems = [
   {
     type: 'video',
     title: 'Rewind Reel 1',
+    thumbnail: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ijvabzkm_FCC94E21-57D5-40AC-A8BE-1EFE5C75EA9E.JPG',
     videoUrl: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ycob3aec_reel%20rewind%203.mp4',
     downloadUrl: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ycob3aec_reel%20rewind%203.mp4',
     filename: 'simon_flee_reel_01.mp4'
@@ -34,6 +35,7 @@ const mediaItems = [
   {
     type: 'video',
     title: 'Rewind Reel 2',
+    thumbnail: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/xq6p0045_8CDBA0BE-D10E-42A7-8735-88D1CDF7B41B.JPG',
     videoUrl: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ra5efl9g_reel%20rewind%204.mp4',
     downloadUrl: 'https://customer-assets.emergentagent.com/job_simon-music-kit/artifacts/ra5efl9g_reel%20rewind%204.mp4',
     filename: 'simon_flee_reel_02.mp4'
@@ -63,22 +65,12 @@ const MediaCard = ({ item, onPreview }) => {
       data-testid={`media-${item.type}-${item.title.toLowerCase().replace(/\s/g, '-')}`}
     >
       {/* Thumbnail */}
-      <div className="relative aspect-square overflow-hidden bg-[#0A0A0A]">
-        {item.type === 'video' ? (
-          <video
-            src={item.videoUrl}
-            muted
-            playsInline
-            preload="metadata"
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <img
-            src={item.thumbnail}
-            alt={item.title}
-            className="w-full h-full object-cover img-grayscale group-hover:filter-none transition-all duration-300"
-          />
-        )}
+      <div className="relative aspect-square overflow-hidden bg-[#E5E5E5]">
+        <img
+          src={item.thumbnail}
+          alt={item.title}
+          className="w-full h-full object-cover img-grayscale group-hover:filter-none transition-all duration-300"
+        />
         
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#0A0A0A]/0 group-hover:bg-[#0A0A0A]/40 transition-all duration-300 flex items-center justify-center">
